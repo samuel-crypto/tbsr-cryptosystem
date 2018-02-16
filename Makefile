@@ -1,8 +1,9 @@
-$OBJECTS := src/main.o
-$BINARY := bin/tbsr
+OBJECTS := src/main.o src/tbsr.o
+BINARY := bin/tbsr
+CFLAGS :=
 
 all: build clean
-bulid: $(OBJECTS)
-	$(CC) -c $(OBJECTS) -o $(BINARY)
+build: $(OBJECTS)
+	$(CC) $(OBJECTS) -o $(BINARY)
 clean:
 	rm -f $(OBJECTS)
